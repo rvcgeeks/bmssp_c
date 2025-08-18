@@ -1,0 +1,87 @@
+D:\bmssp>g++ -std=c++11 -O2 bmssp_dot.cpp -o bmssp
+
+D:\bmssp>.\bmssp.exe sample.dot A
+Source: A
+
+To A: dist=0  path=A
+To B: dist=3  path=A -> B
+To C: dist=6  path=A -> C
+To D: dist=7  path=A -> B -> D
+To E: dist=9  path=A -> B -> D -> E
+To F: dist=10  path=A -> B -> D -> E -> F
+To G: dist=16  path=A -> B -> D -> E -> G
+To H: dist=12  path=A -> B -> D -> E -> F -> H
+
+D:\bmssp>.\bmssp.exe sample.dot A H
+Source: A, Target: H
+dist=12  path=A -> B -> D -> E -> F -> H
+
+D:\bmssp>.\bmssp.exe sample_big.dot N0
+Source: N0
+
+To N0: dist=0  path=N0
+To N1: dist=4  path=N0 -> N1
+To N2: dist=11  path=N0 -> N1 -> N2
+To N3: dist=14  path=N0 -> N1 -> N2 -> N3
+To N4: dist=20  path=N0 -> N1 -> N2 -> N3 -> N4
+To N5: dist=7  path=N0 -> N5
+To N6: dist=15  path=N0 -> N5 -> N6
+To N7: dist=17  path=N0 -> N5 -> N6 -> N7
+To N8: dist=26  path=N0 -> N5 -> N6 -> N7 -> N8
+To N9: dist=30  path=N0 -> N5 -> N6 -> N7 -> N8 -> N9
+To N10: dist=17  path=N0 -> N5 -> N10
+To N11: dist=20  path=N0 -> N5 -> N10 -> N11
+To N12: dist=20  path=N0 -> N1 -> N2 -> N12
+To N13: dist=25  path=N0 -> N1 -> N2 -> N12 -> N13
+To N14: dist=33  path=N0 -> N1 -> N2 -> N12 -> N13 -> N14
+To N15: dist=23  path=N0 -> N5 -> N10 -> N15
+To N16: dist=29  path=N0 -> N5 -> N10 -> N15 -> N16
+To N17: dist=38  path=N0 -> N5 -> N10 -> N15 -> N16 -> N17
+To N18: dist=30  path=N0 -> N5 -> N6 -> N7 -> N18
+To N19: dist=37  path=N0 -> N5 -> N6 -> N7 -> N18 -> N19
+To N20: dist=34  path=N0 -> N5 -> N10 -> N15 -> N20
+To N21: dist=42  path=N0 -> N5 -> N10 -> N15 -> N20 -> N21
+To N22: dist=44  path=N0 -> N5 -> N10 -> N15 -> N20 -> N21 -> N22
+To N23: dist=50  path=N0 -> N5 -> N10 -> N15 -> N20 -> N21 -> N22 -> N23
+To N24: dist=55  path=N0 -> N5 -> N10 -> N15 -> N20 -> N21 -> N22 -> N23 -> N24
+To N25: dist=42  path=N0 -> N5 -> N10 -> N15 -> N20 -> N25
+To N26: dist=46  path=N0 -> N5 -> N10 -> N15 -> N20 -> N25 -> N26
+To N27: dist=36  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27
+To N28: dist=39  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28
+To N29: dist=47  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29
+To N30: dist=49  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30
+To N31: dist=55  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N31
+To N32: dist=64  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N31 -> N32
+To N33: dist=69  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N31 -> N32 -> N33
+To N34: dist=61  path=N0 -> N5 -> N10 -> N15 -> N20 -> N25 -> N26 -> N34
+To N35: dist=54  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35
+To N36: dist=62  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N36
+To N37: dist=64  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N36 -> N37
+To N38: dist=70  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N36 -> N37 -> N38
+To N39: dist=79  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N36 -> N37 -> N38 -> N39
+To N40: dist=63  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40
+To N41: dist=70  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41
+To N42: dist=74  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41 -> N42
+To N43: dist=82  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41 -> N42 -> N43
+To N44: dist=87  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41 -> N42 -> N43 -> N44
+To N45: dist=70  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45
+To N46: dist=72  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N46
+To N47: dist=81  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N46 -> N47
+To N48: dist=85  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N46 -> N47 -> N48
+To N49: dist=92  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N46 -> N47 -> N48 -> N49
+To N50: dist=80  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50
+To N51: dist=88  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N51
+To N52: dist=91  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N51 -> N52
+To N53: dist=96  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41 -> N42 -> N43 -> N44 -> N53
+To N54: dist=100  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N41 -> N42 -> N43 -> N44 -> N53 -> N54
+To N55: dist=86  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N55
+To N56: dist=88  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N55 -> N56
+To N57: dist=94  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N55 -> N56 -> N57
+To N58: dist=99  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N55 -> N56 -> N57 -> N58
+To N59: dist=98  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N51 -> N52 -> N59
+
+D:\bmssp>.\bmssp.exe sample_big.dot N0 N30
+Source: N0, Target: N30
+dist=49  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30
+
+D:\bmssp>
