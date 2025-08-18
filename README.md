@@ -28,7 +28,7 @@ It is not yet optimized for production use, but aims to be a faithful educationa
   [Shared ChatGPT conversation](https://chatgpt.com/share/68a38505-bc8c-8010-8a36-9586d2a481a7)
 
 - **Other References**:  
-  - [LinkedIn Post](https://www.linkedin.com/posts/george-pashev-04485635_tsinghua-university-reportedly-breaks-the-activity-7361081529038426114-NyzU)  
+  - [LinkedIn Post](https://www.linkedin.com/posts/diogo-ribeiro-9094604a_graphalgorithms-computerscience-datastructures-activity-7361523109146910720-f0Ix)  
   - [Medium Article](https://medium.com/@teggourabdenour/deconstructing-the-shortest-path-algorithm-a-deep-dive-into-theory-vs-implementation-3c6c8149ac16)  
   - [GitHub Reference Repo](https://github.com/madaffrager/Bounded-Multi-Source-Shortest-Path-Algorithm)  
   - [Rust Crate bmssp](https://lib.rs/crates/bmssp)
