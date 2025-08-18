@@ -40,7 +40,7 @@ It is not yet optimized for production use, but aims to be a faithful educationa
 You need a **C++11 or later** compiler.
 
 ```bash
-g++ -std=c++11 -O2 bmssp_dot.cpp -o bmssp
+g++ -std=c++11 -O2 bmssp.cpp -o bmssp
 ````
 
 ---
@@ -50,23 +50,26 @@ g++ -std=c++11 -O2 bmssp_dot.cpp -o bmssp
 The program expects a `.dot` file containing a directed graph with edge weights encoded as `label="w"`.
 
 ```bash
-./bmssp sample_weighted.dot
+./bmssp sample_big.dot
 ```
 
 Example output:
 
 ```
-Graph has 60 nodes
-BMSSP params: t=6, k=7
 Source: N0
 
-To N0: dist=0   path=N0
-To N1: dist=4   path=N0 -> N1
+To N0: dist=0  path=N0
+To N1: dist=4  path=N0 -> N1
 To N2: dist=11  path=N0 -> N1 -> N2
-...
-To N25: dist=42 path=N0 -> N5 -> N10 -> N15 -> N20 -> N25
-To N26: dist=46 path=N0 -> N5 -> N10 -> N15 -> N20 -> N25 -> N26
-...
+To N3: dist=14  path=N0 -> N1 -> N2 -> N3
+To N4: dist=20  path=N0 -> N1 -> N2 -> N3 -> N4
+To N5: dist=7  path=N0 -> N5
+To N6: dist=15  path=N0 -> N5 -> N6
+To N7: dist=17  path=N0 -> N5 -> N6 -> N7
+To N8: dist=26  path=N0 -> N5 -> N6 -> N7 -> N8
+To N9: dist=30  path=N0 -> N5 -> N6 -> N7 -> N8 -> N9
+To N10: dist=17  path=N0 -> N5 -> N10
+To N11: dist=20  path=N0 -> N5 -> N10 -> N11
 ```
 
 ---
