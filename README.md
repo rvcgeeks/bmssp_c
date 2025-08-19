@@ -24,9 +24,6 @@ It is not yet optimized for production use, but aims to be a faithful educationa
 - **Original Paper**:  
   [Breaking the Sorting Barrier for Directed Single-Source Shortest Paths](https://arxiv.org/pdf/2504.17033)
 
-- **Implementation from ChatGPT**:  
-  [Shared ChatGPT conversation](https://chatgpt.com/share/68a38505-bc8c-8010-8a36-9586d2a481a7)
-
 - **Other References**:  
   - [LinkedIn Post](https://www.linkedin.com/posts/diogo-ribeiro-9094604a_graphalgorithms-computerscience-datastructures-activity-7361523109146910720-f0Ix)  
   - [Medium Article](https://medium.com/@teggourabdenour/deconstructing-the-shortest-path-algorithm-a-deep-dive-into-theory-vs-implementation-3c6c8149ac16)  
@@ -40,7 +37,7 @@ It is not yet optimized for production use, but aims to be a faithful educationa
 You need a **C++11 or later** compiler.
 
 ```bash
-g++ -std=c++11 -O2 bmssp.cpp -o bmssp
+gcc -O2 bmssp.c -o bmssp
 ````
 
 ---
@@ -50,12 +47,13 @@ g++ -std=c++11 -O2 bmssp.cpp -o bmssp
 The program expects a `.dot` file containing a directed graph with edge weights encoded as `label="w"`.
 
 ```bash
-./bmssp sample_big.dot
+./bmssp <file.dot> <source_label> [dest_label]
 ```
 
 Example output:
 
 ```
+> bmssp.exe sample_big.dot N0
 Source: N0
 
 To N0: dist=0  path=N0
@@ -69,7 +67,7 @@ To N7: dist=17  path=N0 -> N5 -> N6 -> N7
 To N8: dist=26  path=N0 -> N5 -> N6 -> N7 -> N8
 To N9: dist=30  path=N0 -> N5 -> N6 -> N7 -> N8 -> N9
 To N10: dist=17  path=N0 -> N5 -> N10
-To N11: dist=20  path=N0 -> N5 -> N10 -> N11
+...
 ```
 
 ---
@@ -80,8 +78,6 @@ To N11: dist=20  path=N0 -> N5 -> N10 -> N11
 * **k**: frontier breadth, set adaptively ≈ `sqrt(n)`
 
 These scale automatically with graph size to balance performance and completeness.
-
-In the original demo version, much smaller values were used (`n^{1/3}`, `n^{1/4}`) which worked only for toy graphs. This repo uses adaptive scaling to handle both **small** and **large** graphs.
 
 ---
 

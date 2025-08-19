@@ -1,22 +1,23 @@
-D:\bmssp>g++ -std=c++11 -O2 bmssp_dot.cpp -o bmssp
+D:\rvcgeeks\bmssp_c>gcc bmssp.c -o bmssp
 
-D:\bmssp>.\bmssp.exe sample.dot A
+D:\rvcgeeks\bmssp_c>bmssp.exe sample.dot A
 Source: A
 
 To A: dist=0  path=A
 To B: dist=3  path=A -> B
 To C: dist=6  path=A -> C
 To D: dist=7  path=A -> B -> D
-To E: dist=9  path=A -> B -> D -> E
-To F: dist=10  path=A -> B -> D -> E -> F
-To G: dist=16  path=A -> B -> D -> E -> G
-To H: dist=12  path=A -> B -> D -> E -> F -> H
+To E: dist=9  path=A -> C -> E
+To F: dist=10  path=A -> C -> E -> F
+To G: dist=16  path=A -> C -> E -> G
+To H: dist=12  path=A -> C -> E -> F -> H
 
-D:\bmssp>.\bmssp.exe sample.dot A H
-Source: A, Target: H
-dist=12  path=A -> B -> D -> E -> F -> H
+D:\rvcgeeks\bmssp_c>bmssp.exe sample.dot A H
+Source: A
 
-D:\bmssp>.\bmssp.exe sample_big.dot N0
+To H: dist=12  path=A -> C -> E -> F -> H
+
+D:\rvcgeeks\bmssp_c>bmssp.exe sample_big.dot N0
 Source: N0
 
 To N0: dist=0  path=N0
@@ -80,8 +81,9 @@ To N57: dist=94  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -
 To N58: dist=99  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N55 -> N56 -> N57 -> N58
 To N59: dist=98  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N50 -> N51 -> N52 -> N59
 
-D:\bmssp>.\bmssp.exe sample_big.dot N0 N30
-Source: N0, Target: N30
-dist=49  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30
+D:\rvcgeeks\bmssp_c>bmssp.exe sample_big.dot N0 N49
+Source: N0
 
-D:\bmssp>
+To N49: dist=92  path=N0 -> N1 -> N2 -> N12 -> N13 -> N27 -> N28 -> N29 -> N30 -> N35 -> N40 -> N45 -> N46 -> N47 -> N48 -> N49
+
+D:\rvcgeeks\bmssp_c>
