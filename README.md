@@ -74,8 +74,8 @@ To N10: dist=17  path=N0 -> N5 -> N10
 
 ## ⚙️ Hyperparameters
 
-* **t**: recursion depth, set adaptively ≈ `log2(n)`
-* **k**: frontier breadth, set adaptively ≈ `sqrt(n)`
+* **t**: recursion depth, set adaptively ≈ `(log2(n))^(2/3)`
+* **k**: frontier breadth, set adaptively ≈ `(log2(n))^(1/3)`
 
 These scale automatically with graph size to balance performance and completeness.
 
